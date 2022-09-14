@@ -27,7 +27,7 @@ for i, v in enumerate(np.linspace(0, 1, size * 2 - 1)):
     if i >= size:
         _image = np.flip(image, (0, 1))
 
-    row = (size - 1) - np.absolute((size - 1) - i) # y = |x| + m - размер диагонали
+    row = (size - 1) - np.absolute((size - 1) - i) # y = -|x| + m - размер диагонали
     color = [r,g,b]
     for k in range(row + 1):
         _image[row - k, k, :] = color
